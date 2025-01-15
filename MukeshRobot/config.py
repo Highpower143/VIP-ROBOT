@@ -20,7 +20,7 @@ class Config(object):
     LOGGER = True
     ALLOW_CHATS = True  # Yeh line add karna hoga
     DATABASE_URL = "mongodb+srv://yash:shivanshudeo@yk.6bvcjqp.mongodb.net/?retryWrites=true&w=majority&appName=yk"  # MongoDB URI here
-    # REQUIRED
+    START_IMG = "https://envs.sh/Nzg.jpg"# REQUIRED
     # Login to https://my.telegram.org and fill in these slots with the details given by it
 
     API_ID = "22180072" # integer value, dont use ""
