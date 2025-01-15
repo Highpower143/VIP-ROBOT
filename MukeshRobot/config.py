@@ -2,11 +2,18 @@
 import json
 import os
 
-
 def get_user_list(config, key):
-    with open("{}/MukeshRobot/{}".format(os.getcwd(), config), "r") as json_file:
-        return json.load(json_file)[key]
-
+    try:
+        # Correct path using __file__
+        file_path = os.path.join(os.path.dirname(__file__), config)
+        with open(file_path, "r") as json_file:
+            return json.load(json_file)[key]
+    except FileNotFoundError:
+        print(f"Error: {config} not found in MukeshRobot directory!")
+        return []
+    except KeyError:
+        print(f"Key '{key}' not found in {config}!")
+        return []
 
 # Create a new config.py or rename this to config.py file in same dir and import, then extend this class.
 class Config(object):
