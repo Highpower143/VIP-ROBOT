@@ -19,6 +19,7 @@ def get_user_list(config, key):
 class Config(object):
     LOGGER = True
     ALLOW_CHATS = True  # Yeh line add karna hoga
+    DATABASE_URL = "mongodb+srv://yash:shivanshudeo@yk.6bvcjqp.mongodb.net/?retryWrites=true&w=majority&appName=yk"  # MongoDB URI here
     # REQUIRED
     # Login to https://my.telegram.org and fill in these slots with the details given by it
 
@@ -36,7 +37,7 @@ class Config(object):
     )  # Prints information like gbans, sudo promotes, AI enabled disable states that may help in debugging and shit
     MONGO_DB_URI= "mongodb+srv://yash:shivanshudeo@yk.6bvcjqp.mongodb.net/?retryWrites=true&w=majority&appName=yk"
     # RECOMMENDED
-    SQLALCHEMY_DATABASE_URI = ""  # needed for any database modules
+    SQLALCHEMY_DATABASE_URI = None  # needed for any database modules
     LOAD = []
     NO_LOAD = ["rss", "cleaner", "connection", "math"]
     WEBHOOK = False
